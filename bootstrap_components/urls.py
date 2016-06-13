@@ -15,7 +15,13 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
+from fan_app.views import index_view, detail_view, about_me_view
+
+
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url(r'^$', index_view, name='index_view'),
+    url(r'^detail/$', detail_view, name='detail_view'),
+    url(r'^about_me/$', about_me_view, name='about_me_view')
 ]
