@@ -1,1 +1,26 @@
 {% extends 'base.html' %}
+
+{% block content %}
+
+<div class="row">
+
+{% for player in roster %}
+  <div class="col-sm-6 col-md-4">
+    <div class="thumbnail">
+      <img src="{{ player.picture }}" alt="...">
+      <div class="caption">
+        <h3>{{ player.name }}</h3>
+    <div>Number: {{ player.number }}</div>
+    <div>Position: {{ player.position }}</div>
+    <div>Height: {{ player.height }}</div>
+    <div>Weight: {{ player.weight }}</div>
+    <div>Year: {{ player.year }}</div>
+    <div>Hometown: {{ player.hometown }}</div><div><a href="{{ player.bio_page }}" class="btn btn-primary" role="button">GoDuke.com Bio</a> </div>
+      </div>
+    </div>
+  </div>
+
+{% endfor %}
+</div>
+
+{% endblock %}

@@ -9,7 +9,7 @@ def index_view(request):
 
 def detail_view(request):
     roster = Roster.objects.all()
-    return render(request, 'detail.html', {})
+    return render(request, 'detail.html', {"roster": roster})
 
 def about_me_view(request):
     return render(request, 'about_me.html', {})
