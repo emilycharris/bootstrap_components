@@ -1,0 +1,28 @@
+.nav{
+    font-size: 20px;
+}
+
+.page-header {
+    vertical-align: text-bottom;
+    margin: 0;
+    padding: 0;
+}
+
+
+.title {
+        font-size: 50px;
+        padding: 0px;
+        vertical-align: text-bottom;
+}
+
+img {
+    padding: 0px;
+    margin: 0px;
+    vertical-align: bottom;
+}
+
+.content{
+    font-size: medium;
+    padding-top: 20px;
+    alignment: center;
+}

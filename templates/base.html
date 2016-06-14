@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <title>Duke Men's Basketball 15-16 Season</title>
+    {% load staticfiles %}
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'main.css' %}">
 </head>
 <body>
 <div class="container">
@@ -14,19 +16,19 @@
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
+
+
+
       </button>
-      <a class="navbar-brand" href="{% url 'index_view' %}">DUKE</a>
+
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
+        <li><a href="{% url 'index_view' %}">Home</a></li>
         <li><a href="{% url 'detail_view' %}">Roster <span class="sr-only">(current)</span></a></li>
-        <li><a href="{% url 'about_me_view' %}">About Me</a></li>
+        <li><a href="{% url 'about_me_view' %}">About Me</a></li></ul>
 
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
@@ -34,13 +36,17 @@
 
 
 <div class="page-header">
-  <h1>Duke Men's Basketball <small>15-16 Season</small></h1>
+    <span>
+     {% load staticfiles %}
+    <h1 class="title">
+        <a href="{% url 'index_view' %}"><img src="{% static 'images/logo.png' %}">
+        </a> Duke Men's Basketball <small> 15-16 Season </small></h1></span>
 </div>
 
 
 
      {% block content %}
-    This is the default content block
+    <p class="content">This is the default content block</p>
     {% endblock %}
 </div>
 
